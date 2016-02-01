@@ -1,0 +1,31 @@
+class Class {
+
+  field int n
+  
+  constructor() {}
+
+  method int fib(int n)
+    if (n = 0 | n = 1) then return 1
+    else return this.fib(n - 1) + this.fib(n - 2)
+
+  method void assign()
+  	this.n:=5
+
+  method void main() {
+    String s := new String();
+	MyClass c:=new MyClass();
+	c.assign();
+    "Insert a relatively small number: ".output();
+
+    "Fibonacci(".concat(s).concat(") = ".concat
+	(new MyClass().fib(c.n))).output();
+    "\n".output()
+  }
+  
+  test AltroTest assert(this.fib(this.n)=8)
+  
+  test PassedTest assert(this.fib(this.n)=5)
+    
+  fixture this.n:=4
+
+}

@@ -1,0 +1,36 @@
+class Fibonacci {
+
+  field Assert asserzione
+  field int n
+  field int m
+
+  constructor() {}
+
+  method int fib(int n)
+    if (n = 1 | n = 2) then return 1
+    else return this.fib(n - 1) + this.fib(n - 2)
+
+  method void exe(){
+    this.asserzione:=new Assert()
+        }
+  method void main() {
+	new Fibonacci().exe();
+	"ciao \n".output()
+    
+  }
+  
+  test primoTest {
+  assert(this.fib(this.m)=3);
+  assert(this.fib(this.n)=5);
+  assert(this.fib(this.n)=10)
+  
+  
+  }
+  
+  test secondoTest assert(this.fib(this.m)=3)
+  
+  fixture this.n:=5
+  
+  fixture this.m:=4
+  
+}
